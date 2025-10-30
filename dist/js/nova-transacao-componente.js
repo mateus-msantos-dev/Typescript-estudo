@@ -21,7 +21,7 @@ elementoFormulario.addEventListener("submit", (event) => {
         alert("Tipo de transação inválida");
         return;
     }
-    elementoSaldo.textContent = saldo.toString();
+    elementoSaldo.textContent = formatarMoeda(saldo);
     const novaTransacao = {
         tipoTransacao: tipoTransacao,
         valor: valor,
