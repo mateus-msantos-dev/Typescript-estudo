@@ -5,6 +5,8 @@ import { formatarMoeda, formatarData } from "../utils/formatadores.js";
 
 const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes");
 
+
+renderizarExtrato();
 function renderizarExtrato(): void {
     const gruposTransacoes: GrupoTransacao[] = Conta.getGruposTransacoes();
     elementoRegistroTransacoesExtrato.innerHTML = "";
@@ -37,3 +39,11 @@ function renderizarExtrato(): void {
 
     elementoRegistroTransacoesExtrato.innerHTML = htmlRegistroTransacoes;
 }
+
+const ExtratoComponent = {
+    atualizar(): void {
+        renderizarExtrato();
+    }
+}
+
+export default ExtratoComponent;
